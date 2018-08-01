@@ -15,4 +15,4 @@ app.use(express.urlencoded({extended: true}))
 app.use('/', express.static(path.join(__dirname, 'public')))
 app.use('/api', require('./routes/api').route)
 
-app.listen(2222, () => console.log('Running server at http://localhost:2222')) 
+app.listen(process.env.PORT || 5000, () => console.log('Running server at http://localhost:2222')) 
